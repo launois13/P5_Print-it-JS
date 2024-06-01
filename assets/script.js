@@ -35,7 +35,7 @@ function updateDots(index) {
     });
 }
 
-// Mise à jour des points indicateurs, images et textes
+// Mise à jour des "dots", images et textes
 function updateCarousel(index, direction) {
         if (currentIndex === -1 && direction === 'left') {
         currentIndex = slides.length - 1;
@@ -59,17 +59,17 @@ function updateCarousel(index, direction) {
 arrowLeft.addEventListener('click', function () {
     currentIndex = (currentIndex - 1);
     updateCarousel(currentIndex, 'left');
-    updateDots(currentIndex); // Mise à jour des points indicateurs
+    updateDots(currentIndex); // Mise à jour des "dots""
 });
 
 // Gestionnaire d'événement clic flèche droite
 arrowRight.addEventListener('click', function () {
     currentIndex = (currentIndex + 1) ;
     updateCarousel(currentIndex, 'right');
-    updateDots(currentIndex); // Mise à jour les points indicateurs
+    updateDots(currentIndex); // Mise à jour des "dots""
 });
 
 
 // Afficher la première diapositive au chargement de la page
 updateCarousel(currentIndex, 'démarrage');
-updateDots(currentIndex); // Mise à jour des points indicateurs pour la première diapositive
+updateDots(currentIndex); // Mise à jour des "dots" pour la première diapositive
