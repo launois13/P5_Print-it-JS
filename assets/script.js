@@ -43,30 +43,30 @@ function updateCarousel(index, direction) {
         currentIndex = 0;
     }
 
-    // Mettre à jour l'image
+    //Mise à jour image
     const imagePath = `assets/images/slideshow/${slides[currentIndex].image}`;
     bannerImg.src = imagePath;
     bannerImg.alt = `Slide ${currentIndex + 1}`;
 
-    // Mettre à jour le texte
+    // Mise à jour texte
     const tagLine = slides[currentIndex].tagLine;
     document.querySelector('p').innerHTML = tagLine;
 
     console.log(`Clic sur la flèche ${direction}`);
 }
 
-// Gestionnaire d'événement pour le clic sur la flèche gauche
+// Gestionnaire d'événement clic flèche gauche
 arrowLeft.addEventListener('click', function () {
     currentIndex = (currentIndex - 1);
     updateCarousel(currentIndex, 'left');
     updateDots(currentIndex); // Mise à jour des points indicateurs
 });
 
-// Gestionnaire d'événement pour le clic sur la flèche droite
+// Gestionnaire d'événement clic flèche droite
 arrowRight.addEventListener('click', function () {
     currentIndex = (currentIndex + 1) ;
     updateCarousel(currentIndex, 'right');
-    updateDots(currentIndex); // Mettez à jour les points indicateurs
+    updateDots(currentIndex); // Mise à jour les points indicateurs
 });
 
 
